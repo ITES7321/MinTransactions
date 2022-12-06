@@ -1,0 +1,58 @@
+﻿@page "/transactionapi"
+@using MinTransactions.Shared;
+
+@inject ITransactionService TransactionService
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>SenderId</th>
+        <th>ReceiverId</th>
+        <th>Amount</th>
+        <th>DateTime</th>
+        <th>Comments</th>
+        <th>GroupId</th>
+    </tr>
+    @foreach(var transaction in TransactionService.transactions){
+        <tr>
+            <td>@transaction.Id</td>
+            <td>@transaction.SenderId</td>
+            <td>@transaction.ReceiverId</td>
+            <td>@transaction.Amount</td>
+            <td>@transaction.DateTime</td>
+            <td>@transaction.Comments</td>
+            <td>@transaction.GroupId</td>
+        </tr>
+    }
+
+</table>
+
+
+@code{
+
+    protected override async Task OnInitializedAsync()
+    {
+        await TransactionService.GetTransactions();
+    }
+    
+}
+

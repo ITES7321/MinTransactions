@@ -1,0 +1,8 @@
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.csproj.AssemblyReference.cache
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.AssemblyInfoInputs.cache
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.AssemblyInfo.cs
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.csproj.CoreCompileInputs.cache
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.RazorAssemblyInfo.cache
+C:\Users\Sankalp Varshney\source\repos\MinTransaction_Git\MinTransactions\Server\obj\Release\net6.0\MinTransactions.Server.RazorAssemblyInfo.cs

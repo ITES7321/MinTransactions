@@ -1,0 +1,55 @@
+﻿@page "/personapi"
+@using MinTransactions.Shared;
+
+@inject IPersonService PersonService
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Balance</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Transaction History</th>
+        <th>Groups</th>
+    </tr>
+    @foreach(var person in PersonService.persons){
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Balance</td>
+            <td>@person.Name</td>
+            <td>@person.Contact</td>
+            <td>@person.TransactionHistory</td>
+            <td>@person.Groups</td>  
+        </tr>
+    }
+
+</table>
+
+@code{
+
+    protected override async Task OnInitializedAsync()
+    {
+        await PersonService.GetPersons();
+        
+    }
+    
+}
+

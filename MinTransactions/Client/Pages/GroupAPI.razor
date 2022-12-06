@@ -1,0 +1,53 @@
+﻿@page "/groupapi"
+@using MinTransactions.Shared;
+
+@inject IGroupService GroupService
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Transaction History</th>
+        <th>Members</th>
+        <th>GroupBalance</th>
+    </tr>
+    @foreach(var group in GroupService.groups){
+        <tr>
+            <td>@group.Id</td>
+            <td>@group.Name</td>
+            <td>@group.TransactionHistory</td>
+            <td>@group.Members</td>
+            <td>@group.GroupBalance</td>
+        </tr>
+    }
+
+</table>
+
+@code{
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GroupService.GetGroups();
+    }
+    
+}
+
